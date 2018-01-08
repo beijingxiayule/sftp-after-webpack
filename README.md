@@ -8,8 +8,10 @@ npm i --save-dev sftp-after-webpack
 or
 yarn add sftp-after-webpack --dev
 ```
+## example
 
 >example 1  
+
 webpack.config.js  
 ```javascript
 const SftpAfterWebpack = require('sftp-after-webpack');
@@ -33,6 +35,7 @@ package.json
 ```
 
 > example 2  
+
 webpack.config.js  
 ```javascript
 const SftpAfterWebpack = require('sftp-after-webpack');
