@@ -1,6 +1,14 @@
 # sftp-after-webpack
 a webpack plugin for sftp after webpack;
 
+## install
+webpack.config.js  
+```javascript
+npm i --save-dev sftp-after-webpack
+or
+yarn add sftp-after-webpack --dev
+```
+
 >example 1  
 webpack.config.js  
 ```javascript
