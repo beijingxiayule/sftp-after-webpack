@@ -54,4 +54,5 @@ module.exports = {
 };
 ```
 
-> TODO : test mac system
+> TODO : test mac system  
+you can fork and config yourself
