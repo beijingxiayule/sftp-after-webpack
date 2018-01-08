@@ -1,7 +1,7 @@
 # sftp-after-webpack
 a webpack plugin for sftp after webpack;
 
->example 2
+>example 1  
 webpack.config.js  
 ```javascript
 const SftpAfterWebpack = require('sftp-after-webpack');
@@ -24,7 +24,7 @@ package.json
   },
 ```
 
-> example 2
+> example 2  
 webpack.config.js  
 ```javascript
 const SftpAfterWebpack = require('sftp-after-webpack');
