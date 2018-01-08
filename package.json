@@ -1,0 +1,11 @@
+{
+  "name": "sftp-after-webpack",
+  "version": "1.0.0",
+  "description": "a webpack plugin for sftp",
+  "main": "index.js",
+  "author": "chenym1992",
+  "license": "MIT",
+  "dependencies": {
+    "ssh2-sftp-client": "^2.0.1"
+  }
+}
