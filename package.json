@@ -5,7 +5,7 @@
   "main": "index.js",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/chenym1992/sftp-after-webpack.git"
+    "url": "https://github.com/chenym1992/sftp-after-webpack.git"
   },
   "bugs": {
     "url": "https://github.com/chenym1992/sftp-after-webpack/issues"
