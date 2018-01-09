@@ -10,7 +10,6 @@
   "bugs": {
     "url": "https://github.com/chenym1992/sftp-after-webpack/issues"
   },
-  "homepage": "https://github.com/chenym1992/sftp-after-webpack#readme",
   "author": "chenym1992",
   "license": "MIT",
   "dependencies": {
