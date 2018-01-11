@@ -25,7 +25,10 @@ function GetFileAndDirList(localDir, dirs, files) {
 }
 
 function upload(options, localDirs) {
-    const remotePath = options.remotePath;
+    let remotePath = options.remotePath;
+    if (!/\/$/.test(remotePath)) {
+        remotePath = remotePath + '/'
+    }
     sftp.connect(options).then(() => {
         // return sftp.list('/home');
         sftp.mkdir(remotePath, true)
@@ -41,7 +44,7 @@ function upload(options, localDirs) {
             let file = files[index];
             file = file.substr(localDirs.length).replace(/\\/g, '/')
             sftp.put(files[index], `${remotePath}${file}`, true).then(() => {
-                console.log(`upload file ${files[index]}  ====> ${remotePath}${file}`)
+                console.log(`uploading file ${files[index]}  ====> ${remotePath}${file}`)
                 if (index === files.length - 1) {
                     sftp.end();
                 }
@@ -49,6 +52,7 @@ function upload(options, localDirs) {
         }
 
     }).catch((err) => {
+        sftp.end();
         console.log(err, 'connect err');
     });
 
@@ -67,10 +71,10 @@ class SftpAfterWebpack {
         let options = this.options;
         compiler.plugin("done", function (stats) {
             if (!stats.hasErrors()) {
-                const localPath = compiler.options.output.path;
                 if (!options) {
                     options = getOptions()
                 }
+                const localPath = options.localPath || compiler.options.output.path;
                 upload(options, localPath);
             }
         });

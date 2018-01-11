@@ -30,6 +30,7 @@ package.json
     "port": "22",
     "username": "username",
     "password": "password",
+    "localPath":"/path/to/localPath",//not required default webpack output path
     "remotePath": "/path/to/remoPath"
   },
 ```
@@ -48,6 +49,7 @@ module.exports = {
         "port": "22",
         "username": "username",
         "password": "password",
+        "localPath":"/path/to/localPath",//not required default webpack output path
         "remotePath": "/path/to/remoPath"
     })
   ]
@@ -56,3 +58,6 @@ module.exports = {
 
 > TODO : test mac system  
 you can fork and config yourself
+
+> changelog
+add localPath config
